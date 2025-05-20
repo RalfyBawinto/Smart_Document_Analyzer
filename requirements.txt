@@ -1,0 +1,5 @@
+Flask==2.2.2
+PyPDF2==3.0.0
+transformers==4.24.0
+keybert==0.5.0
+gunicorn==20.1.0

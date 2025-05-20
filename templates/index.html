@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Document Analyzer</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body class="light-mode">
+    <div class="container">
+      <div class="mode-toggle">
+        <button id="toggleModeBtn">Ganti ke Dark Mode</button>
+      </div>
+      <h1>Smart Document Analyzer</h1>
+      <p>Unggah file PDF (maks. 5 MB) untuk diringkas secara otomatis</p>
+
+      <div class="upload-box" id="uploadBox">
+        <input type="file" id="fileInput" accept=".pdf" />
+        <label for="fileInput">Klik di sini atau seret file PDF</label>
+      </div>
+
+      <div id="fileInfo" class="hidden"></div>
+      <button id="analyzeBtn" class="hidden">Analisa Dokumen</button>
+
+      <div id="loadingSpinner" class="hidden spinner"></div>
+
+      <div id="resultSection" class="hidden">
+        <h2>Hasil Ringkasan</h2>
+        <pre id="summaryText"></pre>
+        <button id="copyBtn">Salin Ringkasan</button>
+
+        <h3>Kata Kunci Utama</h3>
+        <ul id="highlightList"></ul>
+      </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+
+    <footer class="footer">
+      <small>© 2025 Kelompok 6 TKTI. All rights reserved.</small>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,163 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Segoe UI", sans-serif;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+} */
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  background-color: var(--box-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.upload-box {
+  border: 2px dashed var(--border-color);
+  padding: 2rem;
+  text-align: center;
+  margin-top: 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #ffffff10;
+  transition: 0.3s;
+}
+
+.upload-box:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.upload-box input[type="file"] {
+  display: none;
+}
+
+.upload-box label {
+  cursor: pointer;
+}
+
+#fileInfo {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #3730a3;
+}
+
+pre {
+  background-color: #00000010;
+  padding: 1rem;
+  white-space: pre-wrap;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Default: Light Mode */
+body.light-mode {
+  --bg-color: #ffffff;
+  --text-color: #1a1a1a;
+  --primary-color: #4f46e5;
+  --box-bg: #f3f4f6;
+  --border-color: #d1d5db;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f3f4f6;
+  --primary-color: #6366f1;
+  --box-bg: #1f1f1f;
+  --border-color: #3f3f3f;
+}
+
+/* Tombol toggle */
+.mode-toggle {
+  text-align: right;
+  margin-bottom: 1rem;
+}
+.mode-toggle button {
+  font-size: 0.8rem;
+  padding: 0.4rem 0.8rem;
+}
+
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid var(--primary-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 1.5rem auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: var(--text-color);
+  opacity: 0.6;
+  padding: 1rem 0;
+}
